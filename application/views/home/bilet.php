@@ -182,7 +182,6 @@
 
                             <p><?php echo $seferler[0]['KalkisSaati'] . ".00"; ?></p>
                         </div>
-
                         <div class="facilities">
 
                             <p><?php echo $seferler[0]['VarisSaati'] . ".00"; ?></p>
