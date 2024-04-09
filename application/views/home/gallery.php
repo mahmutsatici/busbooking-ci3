@@ -9,7 +9,7 @@
                             if (!empty($seferler) && is_array($seferler)) {
                                 
                         ?>
-                    <div class="row">
+                    <div class="row"> 
                         <label id="start" style="display:none"
                             for="<?php echo $seferler[0]['KalkisYeri']; ?>"><?php echo $seferler[0]['KalkisYeri']; ?></label>
                         <label id="end" style="display:none"
