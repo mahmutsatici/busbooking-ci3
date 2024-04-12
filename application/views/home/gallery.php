@@ -11,10 +11,7 @@
                         ?>
                     <div class="row"> 
                         
-                        <label id="start" style="display:none"
-                            for="<?php echo $seferler[0]['KalkisYeri']; ?>"><?php echo $seferler[0]['KalkisYeri']; ?></label>
-                        <label id="end" style="display:none"
-                            for="<?php echo $seferler[0]['VarisYeri']; ?>"><?php echo $seferler[0]['VarisYeri']; ?></label>
+                       
 
                         <table class="table table-hover">
                             <thead class="table-dark">

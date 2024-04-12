@@ -1,11 +1,12 @@
 <?php
     class Home extends CI_Controller
     {
+        
         public function __construct()
         {
             parent::__construct();
             $this->load->model('CommonModel', 'CM');
-            
+            $kontrol = 2;
             
             
         }
@@ -56,9 +57,10 @@
             $data["seferid"] = $seferID;    
             $data["seferler"] = $this->CM->select_data("seferler", "*", array('SeferID' => $seferID));
             $data["otobusplaka"] = $this->CM->select_data("otobus", "*", "" );
-
+           
             if(!$this->session->userdata("session"))
             {
+                
                 redirect(base_url("login"));
                 return false;
             }
