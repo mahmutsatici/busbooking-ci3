@@ -459,12 +459,6 @@ li a {
 }
 
 
-input[type=text] {
-    border: none !important;
-    font-family: 'Cardo', serif;
-    font-size: 12px;
-}
-
 #date-1, #date-2 {
     border-right: 1px solid grey;
 }
