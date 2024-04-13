@@ -6,7 +6,7 @@
         {
             parent::__construct();
             $this->load->model('CommonModel', 'CM');
-            $kontrol = 2;
+            
             
             
         }
@@ -60,8 +60,8 @@
            
             if(!$this->session->userdata("session"))
             {
-                
-                redirect(base_url("login"));
+                $kontrol = 1;
+                redirect(base_url("login/"));
                 return false;
             }
             
@@ -93,12 +93,7 @@
             $this->load->view('home/satinal');
             $this->load->view('home/include/footer');
         }
-        public function registerislem()
-        {
-           
-            $this->load->view('home/registerislem');
-            
-        }
+        
         public function register()
         {
             $this->load->view('home/include/header');

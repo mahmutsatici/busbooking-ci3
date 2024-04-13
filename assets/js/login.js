@@ -14,8 +14,14 @@ $(document).on("click", "#loginbutton", function() {
         $.post(BASE_URL + "login/login", obj, function(resp) {
             let fb = JSON.parse(resp);
             if(fb.status=="true"){
+                if (localStorage.getItem("kontrol") == 1) {
+                    window.location.href = BASE_URL + "home/bilet/"+localStorage.getItem("seferid");
+                    
+                }else{
+                    window.location.href = BASE_URL + "home";
+                }
+
                 
-                window.location.href = BASE_URL + "home";
             }else{
                 alert("username and parola not match");
             }

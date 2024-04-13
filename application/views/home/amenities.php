@@ -55,4 +55,7 @@
                 </div>
             </div>
 
-            </section>s
+            </section>
+            <script>    
+                localStorage.setItem("kontrol", 2);
+            </script>

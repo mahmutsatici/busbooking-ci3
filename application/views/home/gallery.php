@@ -1,3 +1,4 @@
+
 <section class="rooms-n-suites">
     <div class="container" style="margin-top: 100px">
         <div class="col-12" id="innerPageHeading"></div>
@@ -9,9 +10,9 @@
                             if (!empty($seferler) && is_array($seferler)) {
                                 
                         ?>
-                    <div class="row"> 
-                        
-                       
+                    <div class="row">
+
+
 
                         <table class="table table-hover">
                             <thead class="table-dark">
@@ -50,5 +51,10 @@
                     <i class="fas fa-arrow-up"></i>
                 </button>
             </div>
-            
+
 </section>
+<script>
+    localStorage.setItem("kontrol", 1);
+    localStorage.setItem("seferid", <?php echo $sefer['SeferID'] ?>);
+    
+</script>

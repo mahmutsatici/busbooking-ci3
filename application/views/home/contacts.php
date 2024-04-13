@@ -54,5 +54,8 @@
         </div>
     </section>
     <!-- contact Section end-->
+            <script>    
+                localStorage.setItem("kontrol", 2);
+            </script>
 
     

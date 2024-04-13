@@ -10,9 +10,10 @@
         {
             if($this->session->userdata("session"))
             {
-                redirect(base_url("home"));
+                redirect(base_url("home")); // Giriş yapılmışsa galeriye yönlendir
                 return false;
             }
+
             $this->load->view('home/include/header');
             $this->load->view('login');
             $this->load->view('home/include/footer');

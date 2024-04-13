@@ -77,7 +77,10 @@
 <script src="<?php  echo base_url() ?>assets/js/login.js"></script>
 <script src=" <?php echo base_url("assets/js/jquery.js") ?>"></script>
 <script src=" <?php echo base_url("assets/js/bootstrap.js") ?>"></script>
-
+<script>
+    console.log(localStorage.getItem("kontrol"));
+    console.log(localStorage.getItem("seferid"));
+</script>
 
 </body>
 

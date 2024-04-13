@@ -57,4 +57,6 @@
         }
         return true; // Formun gönderilmesine izin ver
     }
+    localStorage.setItem("kontrol", 2);
+    
 </script>
