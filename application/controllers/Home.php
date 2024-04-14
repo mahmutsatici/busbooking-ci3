@@ -54,9 +54,12 @@
         public function bilet($seferID)
         {
             $data["seferler"] = array();
+            $data["biletler"] = array();
             $data["seferid"] = $seferID;    
             $data["seferler"] = $this->CM->select_data("seferler", "*", array('SeferID' => $seferID));
-            $data["otobusplaka"] = $this->CM->select_data("otobus", "*", "" );
+            $data["otobus"] = $this->CM->select_data("otobus", "*", "" );
+            $data["bilet"] = $this->CM->select_data("biletler", "*", array('SeferID' => $seferID) );
+            $data["kullanici"] = $this->CM->select_data("kullanicilar","*","");
            
             if(!$this->session->userdata("session"))
             {
@@ -79,12 +82,6 @@
             
             $this->load->view('home/include/header');
             $this->load->view('home/account');
-            $this->load->view('home/include/footer');
-        }
-        public function mail()
-        {
-            $this->load->view('home/include/header');
-            $this->load->view('home/mail');
             $this->load->view('home/include/footer');
         }
         public function satinal()

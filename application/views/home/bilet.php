@@ -1,19 +1,13 @@
 <br><br><br><br>
-
-
 <section class="rooms-n-suites">
     <div class="container">
-
-
         <!-- Cottage -->
         <div class="row" id="room-row">
             <center>
                 <h2 class="header-h2 header-text">Sefer Ayrıntıları <br><span class="price">Lütfen Koltuk Seçiniz</span>
                 </h2>
             </center>
-
             <div class="col-12 col-lg-6" id="left-room-col">
-
                 <!-- 1st row -->
                 <center>
                     <div class="checkbox-container">
@@ -95,7 +89,6 @@
                             <input type="checkbox" id="checkbox24">
                             <label for="checkbox24"></label>
                         </div>
-
                         <!-- 9th row -->
                         <div class="checkbox-item">
                             <input type="checkbox" id="checkbox25">
@@ -118,110 +111,112 @@
                     </div>
             </div>
             </center>
-
             <div class="col-12 col-lg-6" id="right-room-col">
-
-
-
                 <div class="facilities-main">
                     <div class="left">
                         <div class="facilities">
-
-
-                            <p>Kalkış Şehri</p>
-                        </div>
-
-                        <div class="facilities">
-
-                            <p>Varış Şehri</p>
-                        </div>
-
-
-
-                        <div class="facilities">
-
-                            <p>Kalkış Saati</p>
-                        </div>
-
-                        <div class="facilities">
-
-                            <p>Varış Saati</p>
-                        </div>
-
-                        <div class="facilities">
-
-                            <p>Tarih</p>
-                        </div>
-
-                        <div class="facilities">
-
-                            <p>Fiyat</p>
+                            <p>Kalkış Şehri:</p>
                         </div>
                         <div class="facilities">
-
-                            <p>Sefer Numarası </p>
+                            <p>Varış Şehri:</p>
                         </div>
-
+                        <div class="facilities">
+                            <p>Kalkış Saati:</p>
+                        </div>
+                        <div class="facilities">
+                            <p>Varış Saati:</p>
+                        </div>
+                        <div class="facilities">
+                            <p>Tarih:</p>
+                        </div>
+                        <div class="facilities">
+                            <p>Fiyat:</p>
+                        </div>
+                        <div class="facilities">
+                            <p>Sefer Numarası: </p>
+                        </div>
                     </div>
-
                     <div class="right">
-
                         <div class="facilities">
-
                             <p><?php echo strtoupper($seferler[0]['KalkisYeri']); ?></p>
                         </div>
-
                         <div class="facilities">
-
                             <p><?php echo strtoupper($seferler[0]['VarisYeri']); ?></p>
                         </div>
-
-
-
                         <div class="facilities">
-
                             <p><?php echo $seferler[0]['KalkisSaati'] . ".00"; ?></p>
                         </div>
                         <div class="facilities">
-
                             <p><?php echo $seferler[0]['VarisSaati'] . ".00"; ?></p>
                         </div>
-
                         <div class="facilities">
-
                             <p><?php echo date("d/m/Y", strtotime($seferler[0]['Tarih'])); ?></p>
                         </div>
                         <div class="facilities">
-
                             <p><?php echo $seferler[0]['Fiyat'] . " TL"; ?></p>
                         </div>
                         <div class="facilities">
-
                             <p> <?php echo $seferid ?> </p>
                         </div>
-
-
-
                     </div>
                 </div>
-
-
                 <div class="facilities-btns">
                     <a href="<?php echo base_url("home/satinal") ?>" class="btn btn-warning btn-floating btn-lg">Satın
                         Al</a> </td>
-
                 </div>
-
-
-
             </div>
         </div>
-
-
-
-
     </div>
-    <script>    
-        localStorage.setItem("kontrol", 2);
+    <?php print_r($bilet) ?><br>
+    <?php
+    // 40 kere dönen bir döngü oluşturuluyor
+    for ($j = 0; $j < count($bilet); $j++) {
+    for ($i = 1; $i <= 39; $i++) {
+        
+        // Her 2 butondan sonra boşluk bırakılıyor
+        if ($i % 3 == 0) { ?>
+    <button type="button" <?php 
+            if($bilet[$j]["KoltukNumarasi"]==$i)
+            {
+                if($bilet[$j]["Cinsiyet"]=="Erkek")
+                { 
+                    echo 'class="btn btn-success"';
+                }
+                else if($bilet[$j]["Cinsiyet"]=="Kadın")
+                { 
+                    echo 'class="btn btn-danger"';
+                }
+            }
+            else
+            {
+               echo 'class="btn btn-secondary"';
+            }    ?> style="margin-left: 30px; margin-right: 3px; margin-top: 3px; margin-bottom: 3px; width: 50px">
+        <?php echo $i ?>
+    </button><br> <?php
+        } else { ?>
+    <button type="button" <?php  
+            if($bilet[$j]["KoltukNumarasi"]==$i)
+            {
+                if($bilet[$j]["Cinsiyet"]=="Erkek")
+                { 
+                    echo 'class="btn btn-success"';
+                }
+                else if($bilet[$j]["Cinsiyet"]=="Kadın")
+                { 
+                    echo 'class="btn btn-danger"';
+                }
+            }
+            else
+            {
+               echo 'class="btn btn-secondary"';
+            }  ?> style="margin-left: 3px; margin-right: 3px; margin-top: 3px; margin-bottom: 3px; width: 50px">
+        <?php echo $i ?>
+    </button> <?php
+        }
+    }
+}
+    ?>
+    <script>
+    localStorage.setItem("kontrol", 2);
     </script>
 </section>

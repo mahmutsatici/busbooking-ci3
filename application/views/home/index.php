@@ -34,8 +34,7 @@
                         <input style="margin-right: 15px" name="Tarih" type="date" placeholder="Tarih"
                             class="calender-text" required min="<?php echo date('Y-m-d'); ?>">
                     </div>
-                    <button style="margin-left: 5px; margin-right: 5px" type="submit" class="btn btn-warning"><i
-                            class="fas fa-search"></i></button>
+                    <button style="margin-left: 5px; margin-right: 5px" type="submit" class="btn btn-warning">Ara</button>
                             
             </div>
             
